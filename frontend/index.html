@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DocuMind AI | Documentation Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="brand">
+            <div class="brand-icon">D</div>
+            <div>
+                <h1>DocuMind AI</h1>
+                <p>Intelligent Code Documentation Assistant</p>
+            </div>
+        </div>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            Local Workspace
+        </span>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <span class="eyebrow">AI-POWERED DEVELOPER TOOL</span>
+
+            <h2>Documentation that keeps up with your code.</h2>
+
+            <p>
+                Analyze code changes, discover documentation needs,
+                and generate clear technical documentation.
+            </p>
+        </section>
+
+        <!-- STEP 01: Code Input Section -->
+        <section class="workspace">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Analyze Code</h2>
+                    <p>Upload a code file or paste your code below.</p>
+                </div>
+
+                <span class="step-label">STEP 01</span>
+            </div>
+
+            <label for="codeFile">Upload Code File</label>
+
+            <input
+                type="file"
+                id="codeFile"
+                accept=".py,.java,.js,.html,.css,.c,.cpp,.txt"
+            >
+
+            <label for="codeInput" style="margin-top: 20px;">
+                Or paste your code or code changes
+            </label>
+
+            <textarea
+                id="codeInput"
+                placeholder="Paste your code here..."
+                rows="10"
+            ></textarea>
+
+            <div class="form-footer">
+                <span>
+                    Supported input: Python, Java, JavaScript,
+                    HTML, CSS, C, C++ and TXT
+                </span>
+
+                <button id="analyzeBtn" type="button">
+                    Analyze
+                </button>
+            </div>
+
+        </section>
+
+        <!-- STEP 02: Git Diff Analysis -->
+        <section class="workspace">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Git Diff Analysis</h2>
+                    <p>
+                        Analyze code changes and identify modified files.
+                    </p>
+                </div>
+
+                <span class="step-label">STEP 02</span>
+            </div>
+
+            <label for="diffInput">Paste Git Diff</label>
+
+            <textarea
+                id="diffInput"
+                placeholder="Paste your Git diff here..."
+                rows="10"
+            ></textarea>
+
+            <div class="form-footer">
+                <span>
+                    Identify added, deleted and modified code.
+                </span>
+
+                <button id="analyzeDiffBtn" type="button">
+                    Analyze Changes
+                </button>
+            </div>
+
+        </section>
+
+        <!-- STEP 03: Git Diff Results -->
+        <section class="results" id="diffResults">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Code Change Results</h2>
+                    <p>
+                        Your Git Diff analysis will appear here.
+                    </p>
+                </div>
+            </div>
+
+            <div class="empty-state">
+                <div class="empty-icon">✦</div>
+
+                <h3>Ready to analyze changes</h3>
+
+                <p>
+                    Paste a Git diff above to identify
+                    added, deleted and modified code.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- STEP 04: Documentation Review & Approval -->
+        <section class="results" id="documentationReview">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Documentation Review & Approval</h2>
+                    <p>
+                        Review, edit and approve AI-generated
+                        documentation updates.
+                    </p>
+                </div>
+
+                <span class="step-label">STEP 04</span>
+            </div>
+
+            <div id="reviewContent">
+
+                <div class="empty-state">
+                    <div class="empty-icon">✦</div>
+
+                    <h3>Documentation review is ready</h3>
+
+                    <p>
+                        Analyze your Git Diff to generate
+                        documentation suggestions for review.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STEP 05: Documentation Results -->
+        <section class="results" id="results">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Generated Documentation</h2>
+                    <p>
+                        Your generated technical documentation
+                        will appear here.
+                    </p>
+                </div>
+            </div>
+
+            <div class="empty-state">
+                <div class="empty-icon">✦</div>
+
+                <h3>Ready to generate documentation</h3>
+
+                <p>
+                    Upload a code file or add your code above
+                    to begin generating documentation.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            DocuMind AI · Intelligent Code Documentation Assistant
+        </footer>
+
+    </main>
+
+    <!-- Markdown Rendering Library -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- HTML Sanitization Library -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

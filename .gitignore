@@ -1,0 +1,23 @@
+
+# Python virtual environment
+.venv/
+venv/
+
+# Environment variables and API keys
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Uploaded files
+uploads/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
